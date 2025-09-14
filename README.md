@@ -15,6 +15,7 @@ Manual testing project for the **DemoBlaze demo website**, completed as part of 
   - Linked test cases to acceptance criteria and bugs for traceability
 
 ## Repository Structure
+'''
 DemoBlaze_Project/
 │── Requirements_Analysis/
 │ ├── User_Stories.xlsx
@@ -30,7 +31,7 @@ DemoBlaze_Project/
 │ ├── Story_UserStories.csv
 │ ├── SubTasks_acceptance.csv
 │ ├── Test_Cases.csv
-
+'''
 
 ## Purpose
 

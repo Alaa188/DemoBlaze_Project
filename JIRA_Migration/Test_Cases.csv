@@ -1,0 +1,81 @@
+﻿Issue Type,ID,Summary,Description,Pre Conditions,Steps,Test Data,Priority,Expected Result,Actual Result,Status,Bug_ID,Reporter
+Test Case,TC_Register_001,Validate signup with valid username & password for unregistered user,"Ensure that System shows a confirmation Alert message: ""Sign up successful.""after new visitors register using a unique username and valid password.","1. User is desplaying SignUp pop-up
+2. User should be unregistered","1.Enter valid Username
+2.Enter valid password
+3.click on signup button
+","1.username=""alaasaeedtaha"" as a new username
+2.password=""12345""",High,"System shows a confirmation Alert  message: ""Sign up successful.""","System shows a confirmation Alert  message: ""Sign up successful.""",Pass,,Alaa Saeed
+Test Case,TC_Register_002,Validate signup with existing username & valid password,"System shows an Alert  message: ""This user already exists."" after new visitors register using a used username and valid password.","1. User is desplaying SignUp pop-up
+2. User should be unregistered","1.Enter invalid Username
+2.Enter valid password
+3.click on signup button
+","1.username=""ExistingUser""
+2.password=""12345""",High,"System shows an Alert  message: ""This user already exists.""","System shows an Alert  message: ""This user already exists.""",Pass,,Alaa Saeed
+Test Case,TC_Register_003,Validate signup with blank username & valid password,"System shows an Alert  message: ""Please fill out Username and Password."" after new visitors register entered a valid password and empty username.","1. User is desplaying SignUp pop-up
+2. User should be unregistered","1.Enter empty Username
+2.Enter valid password
+3.click on signup button
+","1.username=""""
+2.password=""12345""",medium,"System shows an Alert says: ""Please fill out Username and Password.""","System shows an Alert says: ""Please fill out Username and Password.""",Pass,,Alaa Saeed
+Test Case,TC_Register_004,Validate signup with valid username & blank password,"System shows an Alert  message: ""Please fill out Username and Password."" after new visitors register entered a valid username and empty password.","1. User is desplaying SignUp pop-up
+2. User should be unregistered","1.Enter valid Username
+2.Enter empty password
+3.click on signup button
+","1.username=""alaasaeedtaha""
+2.password=""""",medium,"System shows an Alert says: ""Please fill out Username and Password.""","System shows an Alert says: ""Please fill out Username and Password.""",Pass,,Alaa Saeed
+Test Case,TC_Register_005,Validate signup with both fields blank,"System shows an Alert  message: ""Please fill out Username and Password."" after new visitors register leave the username and password empty.","1. User is desplaying SignUp pop-up
+2. User should be unregistered","1.leave Username empty
+2.leave password empty
+3.click on signup button
+","1.username=""""
+2.password=""""",High,"System shows an Alert says: ""Please fill out Username and Password.""","System shows an Alert says: ""Please fill out Username and Password.""",Pass,,Alaa Saeed
+Test Case,TC_Login_001,Validate login with valid username & password,Ensure that the system responds to that login of  registered users when he  log in using correct username and password.,"1. User is desplaying login pop-up
+2. User should be registered","1.Enter valid Username
+2.Enter valid password
+3.click on login button
+","1.username=""alaasaeedtaha""
+2.password=""12345""",High,"1.System should refresh the page 
+2.make login and signup buttons invisible 
+3.show the username for the signed user","1.System should refresh the page 
+2.make login and signup buttons invisible 
+3.show the username for the signed user",Pass,,Alaa Saeed
+Test Case,TC_Login_002,Validate login with invalid username& valid password,"System show error: ""User does not exist."" after login of  registered users when he  log in using invalid username and valid password.","1. User is desplaying login pop-up
+2. User should be registered","1.Enter invalid Username
+2.Enter valid password
+3.click on login button
+","1.username=""Wronguser""
+2.password=""12345""",medium,"System show error: ""User does not exist."" ","System show error: ""User does not exist."" ",Pass,,Alaa Saeed
+Test Case,TC_Login_003,Validate login with invalid password & valid username,"System show error: ""Wrong password."" after login of  registered users when he  log in using valid username and invalid password.","1. User is desplaying login pop-up
+2. User should be registered","1.Enter valid Username
+2.Enter invalid password
+3.click on login button
+","1.username=""alaasaeedtaha""
+2.password=""WrogPass""",medium,"System show error: ""Wrong password.""","System show error: ""Wrong password.""",Pass,,Alaa Saeed
+Test Case,TC_Login_004,Validate login with blank username or password,"System show error: ""Please fill out Username and Password"" after login of  registered users with empty username and password fields.","1. User is desplaying login pop-up
+2. User should be registered","1.Enter empty Username
+2.Enter valid password
+3.click on login button
+","1.blank=""wrongUser""
+2=""12345""",High,"System show error: ""Please fill out Username and Password""","System show error: ""Please fill out Username and Password""",Pass,,Alaa Saeed
+Test Case,TC_Logout_001,Validate logout from the home page,Ensure that the system responds to that logout of signed users when he  log in using correct username and password.,User is logged in on homepage,"1.click on logout button in the top of the page
+",-,High,"1.System should refresh the page 
+2.make login and signup buttons visible again
+3.Remove the username from the top of the page","1.System should refresh the page 
+2.make login and signup buttons visible again
+3.Remove the username from the top of the page",Pass,,Alaa Saeed
+Test Case,TC_AddCart_001,Validate adding a product to cart,"System shows success Alert ""Product added"" after shopper add a product to the cart from product details or category.",User is logged in or browsing as guest,"1. click on a product
+2. system should navigate to the item Page
+3.click on add to cart button",-,High,"System shows success Alert ""Product added"" .","System shows success Alert ""Product added"" .",Pass,,Alaa Saeed
+Test Case,TC_AddCart_002,Validate cart contents after adding product,Ensure product details are correct in the cart after adding them.,"1.Product has been added to cart
+2. you are in the item page","1. click on cart button in the top of the page 
+2. system should navigate to the cart page
+3. observe the descriptions that should changes after adding one product",-,High,"Cart should display correct Title, Price, and Quantity = 1.","Cart should display correct Title, Price, and Quantity = 1.",Pass,,Alaa Saeed
+Test Case,TC_AddCart_003,Validate multiple different products in the cart,Ensure cart supports multiple different products by showing the entire list.,"1.multi Products have been added to cart
+2. you are in the item page","1. click on cart button in the top of the page 
+2. system should navigate to the cart page
+3. observe the descriptions that should changes after adding multiple products",-,High,Cart should list all added products with correct details and prices.,Cart should list all added products with correct details and prices.,Pass,,Alaa Saeed
+Test Case,TC_RemoveCart_001,Validate removing a single product from cart,"Ensure The selected product should no longer appear in the cart, and total price updates after shopper removes one product from the cart.","1.multi Products have been added to cart
+2. you are in the cart page","1.click on the delete button that is in the same row of the product you want to remove
+2.obseve the changes that must be done",-,High,"The selected product should no longer appear in the cart, and total price updates.","The selected product should no longer appear in the cart, and total price updates.",Pass,,Alaa Saeed
+Test Case,TC_RemoveCart_003,Validate removing all products at once,"Ensure Cart should show as empty, and total price should reset to NON after shopper emptys the cart completely by deleting all items.",Cart contains items,"1.click on the delete button that is in the same row of the product you want to remove untill its empty
+2.obseve the changes that must be done",-,High,"Cart should show as empty, and total price should reset to NON.","Cart should show as empty, and total price should reset to NON.",Pass,,Alaa Saeed

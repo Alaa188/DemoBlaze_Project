@@ -1,0 +1,7 @@
+﻿Issue Type,ID,Summary,Description
+Story,01.01.01.01.01,User Registration,"As a new visitor, I want to register an account, so that I can securely make purchases and track my orders."
+Story,01.01.01.02.01,User Login,"As a registered user, I want to log in, so that I can access my account and previous orders."
+Story,01.01.01.03.01,User Logout,"As a logged-in user, I want to log out, so that I can keep my account secure when I leave."
+Story,01.02.01.01.01,Add Product to Cart,"As a shopper, I want to select a category and add a product to my cart, so that I can purchase items from my preferred category."
+Story,01.02.01.02.01,Remove Product from Cart,"As a shopper, I want to remove products from my cart, so that I only purchase the items I need."
+Story,01.02.01.03.01,Update Product Quantity in Cart,"As a shopper, I want to update the quantity of products in my cart, so that I can adjust my order before checkout."
